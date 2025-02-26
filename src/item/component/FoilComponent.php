@@ -3,20 +3,20 @@ declare(strict_types=1);
 
 namespace customiesdevs\customies\item\component;
 
-final class AllowOffHandComponent implements ItemComponent {
+final class FoilComponent implements ItemComponent {
 
-	private bool $offHand;
+	private bool $foil;
 
-	public function __construct(bool $offHand = true) {
-		$this->offHand = $offHand;
+	public function __construct(bool $foil = true) {
+		$this->foil = $foil;
 	}
 
 	public function getName(): string {
-		return "allow_off_hand";
+		return "foil";
 	}
 
 	public function getValue(): bool {
-		return $this->offHand;
+		return $this->foil;
 	}
 
 	public function isProperty(): bool {

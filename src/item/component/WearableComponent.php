@@ -21,19 +21,9 @@ final class WearableComponent implements ItemComponent {
 	public const SLOT_WEAPON_OFF_HAND = "slot.weapon.offhand";
 
 	private string $slot;
-	private int $protection;
-	private bool $dispensable;
 
-	/**
-	 * Sets the wearable item component.
-	 * @param string $slot Specifies where the item can be worn
-	 * @param int $protection How much protection the wearable item provides
-	 * @param bool $dispensable Whether the wearable item can be dispensed
-	 */
-	public function __construct(string $slot, int $protection = 0, bool $dispensable = true) {
+	public function __construct(string $slot) {
 		$this->slot = $slot;
-		$this->protection = $protection;
-		$this->dispensable = $dispensable;
 	}
 
 	public function getName(): string {
@@ -42,9 +32,8 @@ final class WearableComponent implements ItemComponent {
 
 	public function getValue(): array {
 		return [
-			"slot" => $this->slot,
-			"protection" => $this->protection,
-			"dispensable" => $this->dispensable
+            "protection" => 8,
+			"slot" => $this->slot
 		];
 	}
 

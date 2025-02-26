@@ -7,11 +7,7 @@ final class MaxStackSizeComponent implements ItemComponent {
 
 	private int $maxStackSize;
 
-	/**
-	 * Determines how many of an item can be stacked together.
-	 * @param int $maxStackSize Max Size, Default is set to `64`
-	 */
-	public function __construct(int $maxStackSize = 64) {
+	public function __construct(int $maxStackSize) {
 		$this->maxStackSize = $maxStackSize;
 	}
 
